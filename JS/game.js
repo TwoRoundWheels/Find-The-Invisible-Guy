@@ -75,59 +75,36 @@ var testPosition = function(x1, y1) {
 	if (Math.abs(yOffset - y1 + 10) < (screenHeight * .03) 
 		&& Math.abs(xOffset - x1 + 10) < (screenWidth * .025)) {
 		var changeText = document.getElementById("target");    Used to change the text for testing mouse position, instead of using sound
-		//changeText.innerHTML = "closer!";
-		//changeText =  document.getElementById("xdistance");    Used to update html to display mouse position.
-		//changeText.innerHTML = Math.abs(xOffset -  x1);
-		//changeText = document.getElementById("ydistance");
-		//changeText.innerHTML = Math.abs(yOffset - y1);
 		distanceFromObject = 5;	
 		if (soundBeingPlayed != distanceFromObject) {
-			//playSound();
+			playSound();
 		}								
 	}
 	else if (Math.abs(yOffset - y1) < (screenHeight * .1) 
 		&& Math.abs(xOffset - x1) < (screenWidth * .1)) {
-		//var changeText = document.getElementById("target");   Used to change the text for testing mouse position, instead of using sound
-		//changeText.innerHTML = "close!"
-		//changeText =  document.getElementById("xdistance");   Used to update html to display mouse position.
-		//changeText.innerHTML = Math.abs(xOffset -  x1);
-		//changeText = document.getElementById("ydistance");
-		//changeText.innerHTML = Math.abs(yOffset - y1);
 		distanceFromObject = 4;
 		if (soundBeingPlayed != distanceFromObject) {
-			//playSound();
+			playSound();
 		}				
 	}
 	else  if (Math.abs(yOffset - y1) < (screenHeight * .2) 
 		&& Math.abs(xOffset - x1) < (screenWidth * .2)) {
-		//var changeText = document.getElementById("target");  Used to change the text for testing mouse position, instead of using sound
-		//changeText.innerHTML = "Sortaclose!"
-		//changeText =  document.getElementById("xdistance");  Used to update html to display mouse position.
-		//changeText.innerHTML = Math.abs(xOffset -  x1);
-		//changeText = document.getElementById("ydistance");  
-		//changeText.innerHTML = Math.abs(yOffset - y1);
 		distanceFromObject = 3;
 		if (soundBeingPlayed != distanceFromObject) {
-			//playSound();
+			playSound();
 		}				
 	}
 	else if (Math.abs(yOffset - y1) < (screenHeight * .3) 
 		&& Math.abs(xOffset - x1) < (screenWidth * .3)) {
-		//var changeText = document.getElementById("target")  Used to change the text for testing mouse position, instead of using sound
-		//changeText.innerHTML = "not close";
-		//changeText =  document.getElementById("xdistance");  Used to update html to display mouse position.
-		//changeText.innerHTML = Math.abs(xOffset -  x1);
-		//changeText = document.getElementById("ydistance");
-		//changeText.innerHTML = Math.abs(yOffset - y1);
 		distanceFromObject = 2;
 		if (soundBeingPlayed != distanceFromObject) {
-			//playSound();
+			playSound();
 		}				
 	}
 	else {
 		distanceFromObject = 1;
 		if (soundBeingPlayed != distanceFromObject) {
-			//playSound();
+			playSound();
 		}
 	}
 }
