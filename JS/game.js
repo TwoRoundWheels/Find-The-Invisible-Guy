@@ -113,32 +113,29 @@ var testPosition = function(x1, y1) {
 }
 
 function playSound() {
-    if (distanceFromObject == 1) {
-		var soundToPlay = document.getElementById("sound");
-		soundToPlay.src = sound1;
-	}
-	if (distanceFromObject == 2) {
-		var soundToPlay = document.getElementById("sound");
-		soundToPlay.src = sound2;
-	}
-	if (distanceFromObject == 3) {
-		var soundToPlay = document.getElementById("sound");
-		soundToPlay.src = sound3;
-	}
-	if (distanceFromObject ==  4) {
-		var soundToPlay = document.getElementById("sound");
-		soundToPlay.src = sound4;
-	}
-	if (distanceFromObject == 5) {
-		var soundToPlay = document.getElementById("sound");
-		soundToPlay.src = sound5;
-	}
-	if (distanceFromObject == 6) {
-		var soundToPlay = document.getElementById("sound");
-		soundToPlay.src = sound6;
-	    soundToPlay.loop = false;
-	    soundToPlay.autoplay = false;
-	    soundToPlay.play();
+	var soundToPlay = document.getElementById("sound");
+	switch (distanceFromObject) {
+		case 1:
+			soundToPlay.src = sound1;
+			break;
+		case 2:
+			soundToPlay.src = sound2;
+			break;
+		case 3:
+			soundToPlay.src = sound3;
+			break;
+		case 4:
+			soundToPlay.src = sound4;
+			break;
+		case 5:
+			soundToPlay.src = sound5;
+			break;
+		case 6:
+			soundToPlay.src = sound6;
+		    soundToPlay.loop = false;
+		    soundToPlay.autoplay = false;
+		    soundToPlay.play();
+		    break;  
 	}
 	soundBeingPlayed = distanceFromObject;
 }
