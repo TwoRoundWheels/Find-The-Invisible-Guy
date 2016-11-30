@@ -6,6 +6,15 @@
 	<script type="text/javascript" src="JS/game.js"></script>
 </head>
 <body>
+	<div id="modal" class="hidden">
+		<p id="modal-text" class="hide-text"> The invisible man has a gift for 
+			you!  He really, really, really wants you to have it.  As your mouse
+			pointer gets closer to him, he will get more excited.  This game uses
+			sound, please adjust your speakers to an appropriate level before 
+			clicking start.
+		</p>
+		<button id="start" onclick="hideModal()">Start</button>
+	</div>
 	<a id="target" href="javascript:win()">.</a>
 	<div>
 		<img id="hidden-img" src="images/yuno.png" alt="If you can read this something is wrong. :(">

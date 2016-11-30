@@ -11,15 +11,31 @@ var soundBeingPlayed = null;
 var screenWidth = window.screen.availWidth;
 var screenHeight = window.screen.availHeight;
 
-window.onmousemove = getMousePosition;
-
 window.onload = function() {
 	if (positionChanged == false) {
 		randomizeXPosition();
 		randomizeYPosition();
 		positionChanged = true;
 		randomizeImage();
+		showModal();
 	}
+}
+
+function showModal() {
+	var modal = document.getElementById("modal");
+	modal.className = "visible";
+	var text = document.getElementById("modal-text");
+	text.className = "show-text";
+	var audio = document.getElementById("sound");
+	audio.pause();
+}
+
+function hideModal() {
+	var modal = document.getElementById("modal");
+	modal.style.display = "none";
+	window.onmousemove = getMousePosition;
+	var audio = document.getElementById("sound");
+	audio.play();
 }
 
 function randomizeImage() {
@@ -74,7 +90,6 @@ function getMousePosition(e) {
 var testPosition = function(x1, y1) {	
 	if (Math.abs(yOffset - y1 + 10) < (screenHeight * .03) 
 		&& Math.abs(xOffset - x1 + 10) < (screenWidth * .025)) {
-		var changeText = document.getElementById("target");    Used to change the text for testing mouse position, instead of using sound
 		distanceFromObject = 5;	
 		if (soundBeingPlayed != distanceFromObject) {
 			playSound();

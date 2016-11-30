@@ -34,3 +34,52 @@
 	width: 200px; 
 	height: 100px; 
 }
+
+#modal {
+	border: 2px solid #222;
+	border-radius: 5px;
+	color: #222;
+	font-size: 1.3em;
+	padding: 10px;
+	position: absolute;
+	top: 35%;
+	background-color: #5c6672;
+	overflow: auto;
+}
+
+.show-text {
+	opacity: 1;
+	transition: opacity 1s ease-in;
+}
+
+.hide-text {
+	opacity: 0;
+}
+
+.hidden {
+	left: 50%;
+	width: 0%;
+}
+
+.visible {
+	left: 25%;
+	height: 30%;
+	width: 50%;
+	transition: left .5s ease, width .5s ease;
+}
+
+#start {
+	border-top: none;
+	border-left: none;
+	height: 75px;
+	width: 75px;
+	border-radius: 75px;
+	background-color: #009933;
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+}
+
+#start:hover, #start:active {
+	border: 2px solid white;
+}
