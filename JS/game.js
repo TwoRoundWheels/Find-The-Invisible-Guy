@@ -87,25 +87,31 @@ function getMousePosition(e) {
 	}
 }
 
-var testPosition = function(x1, y1) {	
-	if (Math.abs(yOffset - y1 + 10) < (screenHeight * .03) 
-		&& Math.abs(xOffset - x1 + 10) < (screenWidth * .025)) {
-		distanceFromObject = 5;							
-	}
-	else if (Math.abs(yOffset - y1) < (screenHeight * .1) 
-		&& Math.abs(xOffset - x1) < (screenWidth * .1)) {
-		distanceFromObject = 4;			
-	}
-	else  if (Math.abs(yOffset - y1) < (screenHeight * .2) 
-		&& Math.abs(xOffset - x1) < (screenWidth * .2)) {
-		distanceFromObject = 3;		
-	}
-	else if (Math.abs(yOffset - y1) < (screenHeight * .3) 
-		&& Math.abs(xOffset - x1) < (screenWidth * .3)) {
-		distanceFromObject = 2;		
-	}
-	else {
-		distanceFromObject = 1;
+var testPosition = function(x1, y1) {
+	var yDistance = Math.abs(yOffset + 18 - y1);
+	var xDistance = Math.abs(xOffset - x1);	
+	console.log(xDistance, yDistance);
+	console.log(screenWidth * .025)
+	switch(true) {
+		case (yDistance < screenHeight * .03) && (xDistance < screenWidth * .025):
+			distanceFromObject = 5;
+			console.log(distanceFromObject);
+			break;
+		case (yDistance < screenHeight * .1) && (xDistance < screenWidth * .1):
+			distanceFromObject = 4;
+			console.log(distanceFromObject);
+			break;
+		case (yDistance < screenHeight * .2) && (xDistance < screenWidth * .2):
+			distanceFromObject = 3;
+			console.log(distanceFromObject);
+			break;
+		case (yDistance < screenHeight * .3) && (xDistance < screenWidth * .3):
+			distanceFromObject = 2;
+			console.log(distanceFromObject);
+			break;	
+		default:
+			distanceFromObject = 1;
+			console.log(distanceFromObject);
 	}
 	if (soundBeingPlayed != distanceFromObject) {
 			playSound();
