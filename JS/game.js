@@ -90,38 +90,26 @@ function getMousePosition(e) {
 var testPosition = function(x1, y1) {	
 	if (Math.abs(yOffset - y1 + 10) < (screenHeight * .03) 
 		&& Math.abs(xOffset - x1 + 10) < (screenWidth * .025)) {
-		distanceFromObject = 5;	
-		if (soundBeingPlayed != distanceFromObject) {
-			playSound();
-		}								
+		distanceFromObject = 5;							
 	}
 	else if (Math.abs(yOffset - y1) < (screenHeight * .1) 
 		&& Math.abs(xOffset - x1) < (screenWidth * .1)) {
-		distanceFromObject = 4;
-		if (soundBeingPlayed != distanceFromObject) {
-			playSound();
-		}				
+		distanceFromObject = 4;			
 	}
 	else  if (Math.abs(yOffset - y1) < (screenHeight * .2) 
 		&& Math.abs(xOffset - x1) < (screenWidth * .2)) {
-		distanceFromObject = 3;
-		if (soundBeingPlayed != distanceFromObject) {
-			playSound();
-		}				
+		distanceFromObject = 3;		
 	}
 	else if (Math.abs(yOffset - y1) < (screenHeight * .3) 
 		&& Math.abs(xOffset - x1) < (screenWidth * .3)) {
-		distanceFromObject = 2;
-		if (soundBeingPlayed != distanceFromObject) {
-			playSound();
-		}				
+		distanceFromObject = 2;		
 	}
 	else {
 		distanceFromObject = 1;
-		if (soundBeingPlayed != distanceFromObject) {
-			playSound();
-		}
 	}
+	if (soundBeingPlayed != distanceFromObject) {
+			playSound();
+	}		
 }
 
 function playSound() {
