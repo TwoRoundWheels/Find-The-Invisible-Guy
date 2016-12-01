@@ -87,7 +87,7 @@ function getMousePosition(e) {
 	}
 }
 
-var testPosition = function(x1, y1) {
+function testPosition(x1, y1) {
 	var yDistance = Math.abs(yOffset + 18 - y1);
 	var xDistance = Math.abs(xOffset - x1);	
 	console.log(xDistance, yDistance);
