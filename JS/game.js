@@ -15,21 +15,21 @@ window.onload = function() {
 	randomizeYPosition();
 	positionChanged = true;
 	randomizeImage();
-	showModal();
+	showIntro();
 }
 
-function showModal() {
-	var modal = document.getElementById("modal");
-	modal.className = "visible";
-	var text = document.getElementById("modal-text");
+function showIntro() {
+	var intro = document.getElementById("intro");
+	intro.className = "visible";
+	var text = document.getElementById("intro-text");
 	text.className = "show-text";
 	var audio = document.getElementById("sound");
 	audio.pause();
 }
 
-function hideModal() {
-	var modal = document.getElementById("modal");
-	modal.style.display = "none";
+function hideIntro() {
+	var intro = document.getElementById("intro");
+	intro.style.display = "none";
 	window.onmousemove = getMousePosition;
 	var audio = document.getElementById("sound");
 	audio.play();
