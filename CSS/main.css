@@ -1,13 +1,3 @@
-#target {
-	color: white; 
-	height: 1px; 
-	margin: 0;
-	position: relative; 
-	left: -200px; 
-	top: -200px; 
-	width: 1px;
-}
-
 #hidden-img {
 	display: none;
 	height: 200px; 
@@ -26,15 +16,6 @@
 	width: auto; 
 }
 
-#play-again {
-	background-color: #444; 
-	color: white; 
-	display: none;
-	font-size: 30px; 
-	width: 200px; 
-	height: 100px; 
-}
-
 #modal {
 	border: 2px solid #222;
 	border-radius: 5px;
@@ -47,25 +28,13 @@
 	overflow: auto;
 }
 
-.show-text {
-	opacity: 1;
-	transition: opacity 1s ease-in;
-}
-
-.hide-text {
-	opacity: 0;
-}
-
-.hidden {
-	left: 50%;
-	width: 0%;
-}
-
-.visible {
-	left: 25%;
-	height: 30%;
-	width: 50%;
-	transition: left .5s ease, width .5s ease;
+#play-again {
+	background-color: #444; 
+	color: white; 
+	display: none;
+	font-size: 30px; 
+	width: 200px; 
+	height: 100px; 
 }
 
 #start {
@@ -83,3 +52,35 @@
 #start:hover, #start:active {
 	border: 2px solid white;
 }
+
+#target {
+	color: white; 
+	height: 1px; 
+	margin: 0;
+	position: relative; 
+	left: -200px; 
+	top: -200px; 
+	width: 1px;
+}
+
+.hide-text {
+	opacity: 0;
+}
+
+.hidden {
+	left: 50%;
+	width: 0%;
+}
+
+.show-text {
+	opacity: 1;
+	transition: opacity 1s ease-in;
+}
+
+.visible {
+	left: 25%;
+	height: 30%;
+	width: 50%;
+	transition: left .5s ease, width .5s ease;
+}
+
