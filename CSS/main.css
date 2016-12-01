@@ -23,9 +23,10 @@
 	font-size: 1.3em;
 	padding: 10px;
 	position: absolute;
-	top: 35%;
+	top: 25%;
 	background-color: #5c6672;
 	overflow: auto;
+	z-index: 1;
 }
 
 #play-again {
@@ -79,7 +80,7 @@
 
 .visible {
 	left: 25%;
-	height: 30%;
+	height: 40%;
 	width: 50%;
 	transition: left .5s ease, width .5s ease;
 }
