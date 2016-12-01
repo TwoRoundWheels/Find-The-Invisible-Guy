@@ -13,7 +13,6 @@ var screenHeight = window.screen.availHeight;
 window.onload = function() {
 	randomizeXPosition();
 	randomizeYPosition();
-	positionChanged = true;
 	randomizeImage();
 	showIntro();
 }
