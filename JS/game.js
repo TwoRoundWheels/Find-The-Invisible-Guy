@@ -87,28 +87,23 @@ function getMousePosition(e) {
 function testPosition(x1, y1) {
 	var yDistance = Math.abs(yOffset + 18 - y1);
 	var xDistance = Math.abs(xOffset - x1);	
-	console.log(xDistance, yDistance);
-	console.log(screenWidth * .025)
+	console.log("Here is the distance from the object if you really want to cheat. " 
+		+ "X: " + xDistance + " " + "Y: " + yDistance);
 	switch(true) {
 		case (yDistance < screenHeight * .03) && (xDistance < screenWidth * .025):
 			distanceFromObject = 5;
-			console.log(distanceFromObject);
 			break;
 		case (yDistance < screenHeight * .1) && (xDistance < screenWidth * .1):
 			distanceFromObject = 4;
-			console.log(distanceFromObject);
 			break;
 		case (yDistance < screenHeight * .2) && (xDistance < screenWidth * .2):
 			distanceFromObject = 3;
-			console.log(distanceFromObject);
 			break;
 		case (yDistance < screenHeight * .3) && (xDistance < screenWidth * .3):
 			distanceFromObject = 2;
-			console.log(distanceFromObject);
 			break;	
 		default:
 			distanceFromObject = 1;
-			console.log(distanceFromObject);
 	}
 	if (soundBeingPlayed != distanceFromObject) {
 			playSound();
