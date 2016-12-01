@@ -4,7 +4,6 @@ var sound3 = "sounds/tt3.wav";
 var sound4 = "sounds/tt4.wav";
 var sound5 = "sounds/tt5.wav";
 var sound6 = "sounds/thankyou.wav";
-var positionChanged = false;
 var playingGame = true;
 var distanceFromObject = null;
 var soundBeingPlayed = null;
@@ -12,13 +11,11 @@ var screenWidth = window.screen.availWidth;
 var screenHeight = window.screen.availHeight;
 
 window.onload = function() {
-	if (positionChanged == false) {
-		randomizeXPosition();
-		randomizeYPosition();
-		positionChanged = true;
-		randomizeImage();
-		showModal();
-	}
+	randomizeXPosition();
+	randomizeYPosition();
+	positionChanged = true;
+	randomizeImage();
+	showModal();
 }
 
 function showModal() {
