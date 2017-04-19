@@ -14,10 +14,10 @@ var screenHeight = window.screen.availHeight;
 //On window load, select a random X and Y position for the hidden guy to be 
 //placed at and show the intro dialogue.
 window.onload = function() {
+	showIntro();
 	randomizeXPosition();
 	randomizeYPosition();
 	randomizeImage();
-	showIntro();
 }
 
 //Animate intro text and pause the sound player.  Sound player needs to be 
